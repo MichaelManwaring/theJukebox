@@ -1,26 +1,26 @@
 var Jukebox = {
 	playlist: [],
-	play: function(){
+	play: function(track){
 		console.log("play")
+		track.play()
 	},
-	stop: function () {
+	stop: function (track) {
 		console.log("stop")
+		track.stop()
 	},
 	// pause: function () {}
 	load: function (file) {
-		// this.playlist.push(file)
+		this.playlist.push(file)
 		console.log("load")
 	},
-	queue: function (file) {
+	queue: function (track) {
 		
 	},
 	// random: function(){}
 }
-
-
-
-
-
+var Record_Collection = {
+	tr
+}
 
 $(document).ready(function(){
 
