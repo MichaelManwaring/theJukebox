@@ -3,6 +3,7 @@ $(document).ready(function(){
 	function Jukebox () {
 		this.current_track = 0
 		this.all_tracks = ["leaving.mp3", "Daisy.mp3"]
+		
 		this.playlist = [];
 		this.new_track = function () {
 			console.log("NEW")
