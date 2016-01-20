@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+
 	function Jukebox () {
 		this.playlist = [];
 		this.play_current_record = function () {
@@ -13,6 +14,7 @@ $(document).ready(function(){
 		// this.pause_current_record
 	}
 	the_jokebox = new Jukebox
+
 	$('#play_button').click(function () {
 		console.log("click play")
 		the_jokebox.play_current_record()

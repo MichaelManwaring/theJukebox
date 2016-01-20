@@ -1,8 +1,53 @@
 // main.scss
-html{
-	background-image: url(../images/bricks.jpg);
+$default-dark-red: #98182C;
+$default-bright-red: #D70A00;
+$default-dark-purple: #45006C;
+$default-black: #050216;
+
+html {
+  background-image: url(../images/bricks.jpg); }
+
+body {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white; }
+
+.stage {
+	text-align: center;
 }
-body{
-	background-color: rgba(0,0,0,0.3);
-	color: white;
+
+%comedian_style {
+	width:150px; 
+	height:150px; 
+	margin:10px;
+	padding:10px;
+	border: 10px solid $default-bright-red;
 }
+
+.comedians_list {
+
+}
+
+#louis {
+	@extend %comedian_style;
+}
+
+#amy {
+	@extend %comedian_style;
+}
+
+#aziz {
+	@extend %comedian_style;
+}
+
+#hannibal {
+	@extend %comedian_style;
+}
+
+#george {
+	@extend %comedian_style;
+}
+
+#drop_location{
+	@extend %comedian_style;
+}
+
