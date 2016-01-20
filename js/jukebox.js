@@ -29,7 +29,31 @@ $(document).ready(function(){
 	the_jokebox = new Jukebox
 	the_jokebox.new_track()
 
-	$('#louie').click(function () {
+	$('#louis').click(function () {
+		console.log("clicked LOUIE")
+		the_jokebox.current_track = 0
+		the_jokebox.new_track()
+	})
+
+	$('#amy').click(function () {
+		console.log("clicked AMY")
+		the_jokebox.current_track = 1
+		the_jokebox.new_track()
+	})
+
+	$('#aziz').click(function () {
+		the_jokebox.new_track()
+		console.log("clicked AZIZ")
+	})
+
+	$('#hannibal').click(function () {
+		the_jokebox.new_track()
+		console.log("clicked HANNIBAL")
+	})
+
+	$('#george').click(function () {
+		the_jokebox.new_track()
+		console.log("clicked GEORGE")
 	})
 
 	$('#play_button').click(function () {
