@@ -1,12 +1,8 @@
 
 $(document).ready(function(){
-<<<<<<< HEAD
-
-=======
 	var current_track = 0
 	var all_tracks = ["leaving.mp3", "Daisy.mp3"]
 	$("#mic").html("<source src= " + all_tracks[current_track] + " type='audio/mpeg'>")
->>>>>>> a735b368c6da53aadb9f46422640a976a92385b2
 	function Jukebox () {
 		this.playlist = [];
 		this.play_current_track = function () {
@@ -28,6 +24,9 @@ $(document).ready(function(){
 	}
 
 	the_jokebox = new Jukebox
+
+	$('#louie').click(function () {
+	})
 
 	$('#play_button').click(function () {
 		// console.log("click play")

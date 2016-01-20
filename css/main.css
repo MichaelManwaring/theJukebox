@@ -5,10 +5,8 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   color: white; }
 
-.stage {
-  text-align: center; }
-
 #louis, #amy, #aziz, #hannibal, #george, #drop_location {
+  display: inline-block;
   width: 150px;
   height: 150px;
   margin: 10px;

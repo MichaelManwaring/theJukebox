@@ -11,11 +11,9 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
   color: white; }
 
-.stage {
-	text-align: center;
-}
 
 %comedian_style {
+	display: inline-block;
 	width:150px; 
 	height:150px; 
 	margin:10px;
@@ -23,9 +21,6 @@ body {
 	border: 10px solid $default-bright-red;
 }
 
-.comedians_list {
-
-}
 
 #louis {
 	@extend %comedian_style;
