@@ -1,14 +1,13 @@
 
 $(document).ready(function(){
-<<<<<<< HEAD
-
-=======
-	var current_track = 0
-	var all_tracks = ["leaving.mp3", "Daisy.mp3"]
-	$("#mic").html("<source src= " + all_tracks[current_track] + " type='audio/mpeg'>")
->>>>>>> a735b368c6da53aadb9f46422640a976a92385b2
 	function Jukebox () {
+		this.current_track = 0
+		this.all_tracks = ["leaving.mp3", "Daisy.mp3"]
 		this.playlist = [];
+		this.new_track = function () {
+			console.log("NEW")
+			$("#mic").html("<audio><source src= " + this.all_tracks[this.current_track] + " type='audio/mpeg'></audio>")
+		}
 		this.play_current_track = function () {
 			// console.log("play")
 			$('audio')[0].play()
@@ -28,6 +27,7 @@ $(document).ready(function(){
 	}
 
 	the_jokebox = new Jukebox
+	the_jokebox.new_track()
 
 	$('#play_button').click(function () {
 		// console.log("click play")
@@ -47,15 +47,15 @@ $(document).ready(function(){
 	})
 	$('#next_button').click(function () {
 		// console.log("click next")
-		current_track += 1
-		if (current_track == all_tracks.length){
-			current_track = 0
+		the_jokebox.current_track += 1
+		if (the_jokebox.current_track == the_jokebox.all_tracks.length){
+			the_jokebox.current_track = 0
 		}
-		$("#mic").html("<audio><source src= " + all_tracks[current_track] + " type='audio/mpeg'></audio>")
+		the_jokebox.new_track()
 	})
 	$('#random_button').click(function () {
 		// console.log("click next")
-		current_track = Math.floor(Math.random()*all_tracks.length);
-		$("#mic").html("<audio><source src= " + all_tracks[current_track] + " type='audio/mpeg'></audio>")
+		the_jokebox.current_track = Math.floor(Math.random()*the_jokebox.all_tracks.length);
+		the_jokebox.new_track()
 	})
 })
