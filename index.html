@@ -13,7 +13,6 @@
 		<h1>THE JOKEBOX</h1>
 	</header>
 	<div class="Stage">
-		<div id="drop_location" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 		<audio>
 			<source src="The leaving.mp3" type="audio/mpeg">
 		</audio>
@@ -23,8 +22,15 @@
 		<button id="play_button" type="button">Play!</button>
 		<button id="stop_button" type="button">Stop!</button>
 		<button id="upload_button" type="button">Upload Song</button>
+		<div id='mic'></div>
+		<div id='controls'></div>
+		<button id="play_button" type="button">Tell Joke</button>
+		<button id="pause_button" type="button">Pause/Heckle</button>
+		<button id="reset_button" type="button">Restart Joke</button>
+		<button id="stop_button" type="button">Stop/Not funny</button>
+		<button id="next_button" type="button">Next!!!</button>
+		<button id="random_button" type="button">Random</button>
 	</div>
-<body>
 
 <div class="comedians_list">
 	<div id="louis">
@@ -45,7 +51,5 @@
 </div>
 
 
-</body>
-</html>
 </body>
 </html>
