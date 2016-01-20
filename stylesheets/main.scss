@@ -4,9 +4,6 @@ $default-bright-red: #D70A00 ;
 $default-dark-purple: #45006C ;
 $default-black: #050216 ;
 
-
-html{
-}
 body{
 	background-color: rgba(0,0,0,0.3);
 	color: white;
@@ -30,9 +27,6 @@ body{
 	display: inline-block;
 }
 
-.comedians_list {
-
-}
 
 #louis {
     @extend %comedian_style;
@@ -51,9 +45,5 @@ body{
 }
 
 #george {
-    @extend %comedian_style;
-}
-
-#drop_location{
     @extend %comedian_style;
 }
