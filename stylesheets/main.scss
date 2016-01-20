@@ -1,26 +1,33 @@
 // main.scss
-$default-dark-red: #98182C;
-$default-bright-red: #D70A00;
-$default-dark-purple: #45006C;
-$default-black: #050216;
+$default-dark-red: #98182C ;
+$default-bright-red: #D70A00 ;
+$default-dark-purple: #45006C ;
+$default-black: #050216 ;
 
-html {
-  background-image: url(../images/bricks.jpg); }
 
-body {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white; }
-
-.stage {
+html{
+}
+body{
+	background-color: rgba(0,0,0,0.3);
+	color: white;
 	text-align: center;
+}
+.stage {
+	background-image: url(../images/bricks.jpg);
+	background-size: cover;
+	width: 90%;
+	margin: 5%;
+	height: 500px;
+    text-align: center;
 }
 
 %comedian_style {
-	width:150px; 
-	height:150px; 
-	margin:10px;
-	padding:10px;
-	border: 10px solid $default-bright-red;
+    width:150px; 
+    height:150px; 
+    margin:10px;
+    padding:10px;
+    border: 10px solid $default-bright-red;
+	display: inline-block;
 }
 
 .comedians_list {
@@ -28,26 +35,25 @@ body {
 }
 
 #louis {
-	@extend %comedian_style;
+    @extend %comedian_style;
 }
 
 #amy {
-	@extend %comedian_style;
+    @extend %comedian_style;
 }
 
 #aziz {
-	@extend %comedian_style;
+    @extend %comedian_style;
 }
 
 #hannibal {
-	@extend %comedian_style;
+    @extend %comedian_style;
 }
 
 #george {
-	@extend %comedian_style;
+    @extend %comedian_style;
 }
 
 #drop_location{
-	@extend %comedian_style;
+    @extend %comedian_style;
 }
-
