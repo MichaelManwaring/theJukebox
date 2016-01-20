@@ -1,4 +1,8 @@
-div {
-  background-color: orange; }
+html {
+  background-image: url(../images/bricks.jpg); }
+
+body {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */
