@@ -15,14 +15,10 @@ $(document).ready(function(){
 	the_jokebox = new Jukebox
 	$('#play_button').click(function () {
 		console.log("click play")
-		// var audio = new Audio('The leaving.mp3');
-		// audio.play();
 		the_jokebox.play_current_record()
 	})
 	$('#stop_button').click(function () {
 		console.log("click stop")
-		// var audio = new Audio('The leaving.mp3');
-		// audio.play();
 		the_jokebox.stop_current_record()
 	})
 })
