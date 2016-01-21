@@ -34,24 +34,28 @@ body {
   margin: 0; }
 
 #performing {
-  z-index: -1;
-  display: inline; }
+  z-index: 0;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: 60px;
+  left: 310px; }
 
 #microphone {
-  width: 20%;
-  margin-top: 100px;
-  margin-right: 270px; }
+  width: 20%; }
 
 #louis, #amy, #aziz, #hannibal, #george, #drop_location {
   width: 150px;
   height: 150px;
   margin: 10px;
   border: 10px solid #35314C;
+  border-radius: 10%;
   display: inline-block; }
 
 .on_deck {
   width: 150px;
-  height: 150px; }
+  height: 150px;
+  border-radius: 10%; }
 
 #louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
   border: 10px solid #CBE86B; }
@@ -68,6 +72,11 @@ button {
 button:hover {
   background-color: #1E2345;
   color: #CBE86B; }
+
+.comedian_on_stage {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px; }
 
 @media (max-width: 500px) {
   #microphone {

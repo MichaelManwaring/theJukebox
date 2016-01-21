@@ -47,20 +47,26 @@ body{
     margin: 0;
 }
 #performing{
-    z-index: -1;
-    display: inline;
+    z-index: 0;
+    // display: inline;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 60px;
+    left: 310px;
 }
 #microphone{
     // z-index: 4;
 	width: 20%;
-	margin-top: 100px;
-	margin-right: 270px;
+	// margin-top: 100px;
+	// margin-right: 270px;
 }
 %comedian_style {
     width:150px; 
     height:150px; 
     margin:10px;
     border: 10px solid $default-muted-blue;
+    border-radius: 10%;
 	display: inline-block;
 }
 
@@ -70,6 +76,7 @@ body{
 .on_deck{
     width:150px;
     height:150px;
+    border-radius: 10%;
 }
 
 #louis, #amy, #aziz, #hannibal, #george {
@@ -97,6 +104,12 @@ button {
 button:hover {
 	background-color: $default-dark-blue;
 	color: #CBE86B;
+}
+
+.comedian_on_stage {
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
 }
 
 @media (max-width: 500px) { 
