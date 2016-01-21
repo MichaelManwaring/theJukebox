@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	function Jukebox () {
 		this.current_track = 0
@@ -33,10 +32,28 @@ $(document).ready(function(){
 		$('#performing').html("<img src='images/" + comedian.substring(1)  +".jpg' class='on_deck'>")
 	}
 
+// STUFF FOR V2.0
+// var new_song ={
+// 	name: "louis.mp3",
+// 	img:"",
+// 	index:
+// }
+
+// function Song(name, src){
+// 	this.name = name
+// 	this.img_src = src
+// 	this.location_in_array = 0
+// 	this.setLocation = function(){
+
+// 	}
+// }
+
 	the_jokebox = new Jukebox
 	the_jokebox.new_track()
 
 	$('#louis').click(function () {
+		// $(this)
+		// s.location_in_array
 		console.log("clicked LOUIE")
 		the_jokebox.current_track = 0
 		the_jokebox.new_track()
@@ -100,4 +117,17 @@ $(document).ready(function(){
 		the_jokebox.current_track = Math.floor(Math.random()*the_jokebox.all_tracks.length);
 		the_jokebox.new_track()
 	})
+
+
+	function blink(msg){
+	$(msg).fadeOut('slow', function(){
+	$(this).fadeIn('slow', function(){
+	blink(this);
+	});
+	});
+	}
+
+	blink('#jokebox_header');
+
+
 })

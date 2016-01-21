@@ -12,6 +12,22 @@ body{
 	color: white;
 	text-align: center;
 }
+
+#jokebox_header{
+	font-family: 'Pacifico', cursive;
+	font-size: 70px;
+	float: left;
+	z-index: 2;
+	color: #E15E32;
+	transform: rotate(-20deg);
+	margin: 0;
+}
+
+#controls {
+	position: relative;
+	margin-left: 10px;
+}
+
 .stage {
 	background-image: url(../images/bricks.jpg);
 	background-size: cover;
@@ -35,8 +51,10 @@ body{
     display: inline;
 }
 #microphone{
-	width: 25%;
-    z-index: 4;
+    // z-index: 4;
+	width: 20%;
+	margin-top: 100px;
+	margin-right: 270px;
 }
 %comedian_style {
     width:150px; 
@@ -80,3 +98,16 @@ button:hover {
 	background-color: $default-dark-blue;
 	color: #CBE86B;
 }
+
+@media (max-width: 500px) { 
+	
+	#microphone{
+		display: none;
+	}
+
+	#controls {
+		margin-top: 200px;
+	}
+
+}
+
