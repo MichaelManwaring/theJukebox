@@ -29,7 +29,7 @@ $(document).ready(function(){
 	function replace_pic (comedian) {
 		$('.hider').css( "visibility", "visible");
 		$(comedian).css('visibility', "hidden");
-		$('#performing').html("<img src='images/" + comedian.substring(1)  +".jpg' class='on_deck'>")
+		$('#performing').html("<img src='images/" + comedian.substring(1)  +".jpg' class='comedian_on_stage'>")
 	}
 
 // STUFF FOR V2.0
