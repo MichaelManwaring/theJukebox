@@ -46,7 +46,12 @@ body{
     z-index: 1;
     margin: 0;
 }
+#performing{
+    z-index: -1;
+    display: inline;
+}
 #microphone{
+    // z-index: 4;
 	width: 20%;
 	margin-top: 100px;
 	margin-right: 270px;
@@ -61,6 +66,10 @@ body{
 
 .comedians_list {
 
+}
+.on_deck{
+    width:150px;
+    height:150px;
 }
 
 #louis, #amy, #aziz, #hannibal, #george {

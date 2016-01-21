@@ -33,6 +33,10 @@ body {
   z-index: 1;
   margin: 0; }
 
+#performing {
+  z-index: -1;
+  display: inline; }
+
 #microphone {
   width: 20%;
   margin-top: 100px;
@@ -44,6 +48,10 @@ body {
   margin: 10px;
   border: 10px solid #35314C;
   display: inline-block; }
+
+.on_deck {
+  width: 150px;
+  height: 150px; }
 
 #louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
   border: 10px solid #CBE86B; }

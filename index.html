@@ -12,37 +12,37 @@
 	<header>
 		<h1 id="jokebox_header">The Jokebox</h1>
 	</header>
-		<div class="stage">
-			<div id="spotlight">
-				<div id='mic'></div>
-				<img src="images/microphone.png" id="microphone">
-				<div id='controls'>
-					<button id="play_button" type="button">Tell Joke</button>
-					<button id="pause_button" type="button">Heckle</button>
-					<button id="reset_button" type="button">Restart Joke</button>
-					<button id="stop_button" type="button">Not funny</button>
-					<button id="next_button" type="button">Next!!!</button>
-					<button id="random_button" type="button">Suprise Me</button>
-				</div>
+	<div class="stage">
+		<div id="spotlight">
+			<div id="performing"></div>
+			<div id='mic'></div>
+			<img src="images/microphone.png" id="microphone">
+			<div id='controls'>
+				<button id="play_button" type="button">Tell Joke</button>
+				<button id="pause_button" type="button">Heckle</button>
+				<button id="reset_button" type="button">Restart Joke</button>
+				<button id="stop_button" type="button">Not funny</button>
+				<button id="next_button" type="button">Next!!!</button>
+				<button id="random_button" type="button">Suprise Me</button>
 			</div>
 		</div>
-
-		<div class="comedians_list">
-			<div id="louis">
-				<img src="images/louis.jpg" width="150" height="150">
-			</div>
-			<div id="amy">
-				<img src="images/amy.jpg" draggable="true" width="150" height="150">
-			</div>
-			<div id="aziz">
-				<img src="images/aziz.jpg" width="150" height="150">
-			</div>
-			<div id="hannibal">
-				<img src="images/hannibal.jpg" width="150" height="150">
-			</div>
-			<div id="george">
-				<img src="images/george.jpg" width="150" height="150">
-			</div>
 		</div>
-	</body>
-	</html>
+	<div class="comedians_list">
+		<div id="louis" class="hider">
+			<img src="images/louis.jpg" class="on_deck">
+		</div>
+		<div id="amy" class="hider">
+			<img src="images/amy.jpg" class="on_deck">
+		</div>
+		<div id="aziz" class="hider">
+			<img src="images/aziz.jpg" class="on_deck">
+		</div>
+		<div id="hannibal" class="hider">
+			<img src="images/hannibal.jpg" class="on_deck">
+		</div>
+		<div id="george" class="hider">
+			<img src="images/george.jpg" class="on_deck">
+		</div>
+	</div>
+</body>
+</html>
