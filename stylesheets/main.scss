@@ -8,7 +8,6 @@ $default-muted-blue: #35314C ;
 html{
 }
 body{
-	// background-color: rgba(0,0,0,0.3);
 	background-color: black;
 	color: white;
 	text-align: center;
@@ -21,6 +20,15 @@ body{
 	height: 500px;
     text-align: center;
     border-radius: 5px;
+}
+#spotlight{
+    background-image: url(../images/spotlight.png);
+    background-size: cover;
+    // opacity: 0.9;
+    width:100%;
+    height: 500px;
+    z-index: 1;
+    margin: 0;
 }
 #microphone{
 	width: 25%;
