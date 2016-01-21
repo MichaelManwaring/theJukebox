@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 	function Jukebox () {
 		this.current_track = 0
@@ -26,6 +25,9 @@ $(document).ready(function(){
 			this.reset_current_track()
 		}
 	}
+
+	$("header").css("text-decoration", "blink");
+
 
 	the_jokebox = new Jukebox
 	the_jokebox.new_track()
@@ -91,4 +93,17 @@ $(document).ready(function(){
 		the_jokebox.current_track = Math.floor(Math.random()*the_jokebox.all_tracks.length);
 		the_jokebox.new_track()
 	})
+
+
+	function blink(msg){
+	$(msg).fadeOut('slow', function(){
+	$(this).fadeIn('slow', function(){
+	blink(this);
+	});
+	});
+	}
+
+	blink('#jokebox_header');
+
+
 })
