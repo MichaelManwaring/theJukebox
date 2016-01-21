@@ -20,8 +20,13 @@ body {
   z-index: 1;
   margin: 0; }
 
+#performing {
+  z-index: -1;
+  display: inline; }
+
 #microphone {
-  width: 25%; }
+  width: 25%;
+  z-index: 4; }
 
 #louis, #amy, #aziz, #hannibal, #george, #drop_location {
   width: 150px;
@@ -29,6 +34,10 @@ body {
   margin: 10px;
   border: 10px solid #35314C;
   display: inline-block; }
+
+.on_deck {
+  width: 150px;
+  height: 150px; }
 
 #louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
   border: 10px solid #CBE86B; }

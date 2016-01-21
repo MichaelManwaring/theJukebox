@@ -27,39 +27,48 @@ $(document).ready(function(){
 		}
 	}
 
+	function replace_pic (comedian) {
+		$('.hider').css( "visibility", "visible");
+		$(comedian).css('visibility', "hidden");
+		$('#performing').html("<img src='images/" + comedian.substring(1)  +".jpg' class='on_deck'>")
+	}
+
 	the_jokebox = new Jukebox
 	the_jokebox.new_track()
-	$('#spotlight').click(function () {
-		console.log("clicked spotlight")
-	})
+
 	$('#louis').click(function () {
 		console.log("clicked LOUIE")
 		the_jokebox.current_track = 0
 		the_jokebox.new_track()
+		replace_pic('#louis')
 	})
 
 	$('#amy').click(function () {
 		console.log("clicked AMY")
 		the_jokebox.current_track = 1
 		the_jokebox.new_track()
+		replace_pic('#amy')
 	})
 
 	$('#aziz').click(function () {
 		console.log("clicked AZIZ")
 		the_jokebox.current_track = 2
 		the_jokebox.new_track()
+		replace_pic('#aziz')
 	})
 
 	$('#hannibal').click(function () {
 		console.log("clicked HANNIBAL")
 		the_jokebox.current_track = 3
 		the_jokebox.new_track()
+		replace_pic('#hannibal')
 	})
 
 	$('#george').click(function () {
 		console.log("clicked GEORGE")
 		the_jokebox.current_track = 4
 		the_jokebox.new_track()
+		replace_pic('#george')
 	})
 
 	$('#play_button').click(function () {
