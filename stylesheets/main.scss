@@ -4,6 +4,9 @@ $default-bright-red: #D70A00 ;
 $default-dark-purple: #45006C ;
 $default-black: #050216 ;
 
+
+html{
+}
 body{
 	background-color: rgba(0,0,0,0.3);
 	color: white;
@@ -17,7 +20,9 @@ body{
 	height: 500px;
     text-align: center;
 }
-
+#microphone{
+	width: 25%;
+}
 %comedian_style {
     width:150px; 
     height:150px; 
@@ -27,23 +32,14 @@ body{
 	display: inline-block;
 }
 
+.comedians_list {
 
-#louis {
+}
+
+#louis, #amy, #aziz, #hannibal, #george {
     @extend %comedian_style;
 }
 
-#amy {
-    @extend %comedian_style;
-}
-
-#aziz {
-    @extend %comedian_style;
-}
-
-#hannibal {
-    @extend %comedian_style;
-}
-
-#george {
+#drop_location{
     @extend %comedian_style;
 }

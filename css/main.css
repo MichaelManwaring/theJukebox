@@ -11,7 +11,10 @@ body {
   height: 500px;
   text-align: center; }
 
-#louis, #amy, #aziz, #hannibal, #george {
+#microphone {
+  width: 25%; }
+
+#louis, #amy, #aziz, #hannibal, #george, #drop_location {
   width: 150px;
   height: 150px;
   margin: 10px;
