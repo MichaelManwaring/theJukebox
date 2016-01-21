@@ -1,14 +1,15 @@
 // main.scss
 $default-dark-red: #98182C ;
-$default-bright-red: #D70A00 ;
-$default-dark-purple: #45006C ;
 $default-black: #050216 ;
+$default-dark-blue: #1E2345 ;
+$default-muted-blue: #35314C ;
 
 
 html{
 }
 body{
-	background-color: rgba(0,0,0,0.3);
+	// background-color: rgba(0,0,0,0.3);
+	background-color: black;
 	color: white;
 	text-align: center;
 }
@@ -19,6 +20,7 @@ body{
 	margin: 5%;
 	height: 500px;
     text-align: center;
+    border-radius: 5px;
 }
 #microphone{
 	width: 25%;
@@ -27,8 +29,7 @@ body{
     width:150px; 
     height:150px; 
     margin:10px;
-    padding:10px;
-    border: 10px solid $default-bright-red;
+    border: 10px solid $default-muted-blue;
 	display: inline-block;
 }
 
@@ -40,6 +41,25 @@ body{
     @extend %comedian_style;
 }
 
+#louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
+	border: 10px solid #CBE86B;
+} 
+
 #drop_location{
     @extend %comedian_style;
+}
+
+button {
+	padding: 10px 15px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+	background-color: #CBE86B;
+	color: $default-dark-blue;
+	border-radius: 7px;
+	font-size: 20px;
+}
+
+button:hover {
+	background-color: $default-dark-blue;
+	color: #CBE86B;
 }
