@@ -3,46 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>The Jokebox</title>
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<script type="text/javascript" src='js/jukebox.js'></script>
 </head>
 <body>
-	<div class="stage">
-		<div id="spotlight">
-			<header>
-				<h3>Welcome to... </h3>
-				<h1>THE JOKEBOX</h1>
-			</header>
-			<div id='mic'></div>
-			<img src="images/microphone.png" id="microphone">
-			<div id='controls'>
-				<button id="play_button" type="button">Tell Joke</button>
-				<button id="pause_button" type="button">Heckle</button>
-				<button id="reset_button" type="button">Restart Joke</button>
-				<button id="stop_button" type="button">Not funny</button>
-				<button id="next_button" type="button">Next!!!</button>
-				<button id="random_button" type="button">Suprise Me</button>
+	<header>
+		<h1 id="jokebox_header">The Jokebox</h1>
+	</header>
+		<div class="stage">
+			<div id="spotlight">
+				<div id='mic'></div>
+				<img src="images/microphone.png" id="microphone">
+				<div id='controls'>
+					<button id="play_button" type="button">Tell Joke</button>
+					<button id="pause_button" type="button">Heckle</button>
+					<button id="reset_button" type="button">Restart Joke</button>
+					<button id="stop_button" type="button">Not funny</button>
+					<button id="next_button" type="button">Next!!!</button>
+					<button id="random_button" type="button">Suprise Me</button>
+				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="comedians_list">
-		<div id="louis">
-			<img src="images/louis.jpg" width="150" height="150">
+		<div class="comedians_list">
+			<div id="louis">
+				<img src="images/louis.jpg" width="150" height="150">
+			</div>
+			<div id="amy">
+				<img src="images/amy.jpg" draggable="true" width="150" height="150">
+			</div>
+			<div id="aziz">
+				<img src="images/aziz.jpg" width="150" height="150">
+			</div>
+			<div id="hannibal">
+				<img src="images/hannibal.jpg" width="150" height="150">
+			</div>
+			<div id="george">
+				<img src="images/george.jpg" width="150" height="150">
+			</div>
 		</div>
-		<div id="amy">
-			<img src="images/amy.jpg" draggable="true" width="150" height="150">
-		</div>
-		<div id="aziz">
-			<img src="images/aziz.jpg" width="150" height="150">
-		</div>
-		<div id="hannibal">
-			<img src="images/hannibal.jpg" width="150" height="150">
-		</div>
-		<div id="george">
-			<img src="images/george.jpg" width="150" height="150">
-		</div>
-	</div>
-</body>
-</html>
+	</body>
+	</html>
