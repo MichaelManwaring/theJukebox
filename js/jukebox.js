@@ -29,7 +29,9 @@ $(document).ready(function(){
 
 	the_jokebox = new Jukebox
 	the_jokebox.new_track()
-
+	$('#spotlight').click(function () {
+		console.log("clicked spotlight")
+	})
 	$('#louis').click(function () {
 		console.log("clicked LOUIE")
 		the_jokebox.current_track = 0
