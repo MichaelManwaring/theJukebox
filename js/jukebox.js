@@ -2,7 +2,7 @@
 $(document).ready(function(){
 	function Jukebox () {
 		this.current_track = 0
-		this.all_tracks = ["leaving.mp3", "Daisy.mp3"]
+		this.all_tracks = ["louis.mp3","amy.mp3","aziz.mp3","hannibal.mp3","george.mp3"]
 		
 		this.playlist = [];
 		this.new_track = function () {
@@ -29,6 +29,36 @@ $(document).ready(function(){
 
 	the_jokebox = new Jukebox
 	the_jokebox.new_track()
+
+	$('#louis').click(function () {
+		console.log("clicked LOUIE")
+		the_jokebox.current_track = 0
+		the_jokebox.new_track()
+	})
+
+	$('#amy').click(function () {
+		console.log("clicked AMY")
+		the_jokebox.current_track = 1
+		the_jokebox.new_track()
+	})
+
+	$('#aziz').click(function () {
+		console.log("clicked AZIZ")
+		the_jokebox.current_track = 2
+		the_jokebox.new_track()
+	})
+
+	$('#hannibal').click(function () {
+		console.log("clicked HANNIBAL")
+		the_jokebox.current_track = 3
+		the_jokebox.new_track()
+	})
+
+	$('#george').click(function () {
+		console.log("clicked GEORGE")
+		the_jokebox.current_track = 4
+		the_jokebox.new_track()
+	})
 
 	$('#play_button').click(function () {
 		// console.log("click play")

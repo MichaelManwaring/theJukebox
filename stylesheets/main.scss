@@ -36,23 +36,7 @@ body{
 
 }
 
-#louis {
-    @extend %comedian_style;
-}
-
-#amy {
-    @extend %comedian_style;
-}
-
-#aziz {
-    @extend %comedian_style;
-}
-
-#hannibal {
-    @extend %comedian_style;
-}
-
-#george {
+#louis, #amy, #aziz, #hannibal, #george {
     @extend %comedian_style;
 }
 
