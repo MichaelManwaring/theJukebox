@@ -1,7 +1,7 @@
 $(document).ready(function(){
-	function Jukebox () {
+	function Jukebox (load_tracks) {
 		this.current_track = 0
-		this.all_tracks = ["louis.mp3","amy.mp3","aziz.mp3","hannibal.mp3","george.mp3"]
+		this.all_tracks = load_tracks
 		
 		this.playlist = [];
 		this.new_track = function () {
@@ -48,7 +48,7 @@ $(document).ready(function(){
 // 	}
 // }
 
-	the_jokebox = new Jukebox
+	the_jokebox = new Jukebox(["louis.mp3","amy.mp3","aziz.mp3","hannibal.mp3","george.mp3"])
 	the_jokebox.new_track()
 
 	$('#louis').click(function () {
