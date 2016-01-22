@@ -1,126 +1,18 @@
 // main.scss
-$default-dark-red: #98182C ;
-$default-black: #050216 ;
+$default-orange: #E15E32;
 $default-dark-blue: #1E2345 ;
 $default-muted-blue: #35314C ;
+$default-neon-yellow: #CBE86B ;
 
+@import 'bourbon/bourbon';
+@import '_buttons';
+@import '_comedians';
+@import '_stage';
 
-html{
-}
 body{
 	background-color: black;
 	color: white;
 	text-align: center;
 }
 
-#jokebox_header{
-	font-family: 'Pacifico', cursive;
-	font-size: 70px;
-	float: left;
-	z-index: 2;
-	color: #E15E32;
-	transform: rotate(-20deg);
-	margin: 0;
-}
-
-#controls {
-	position: relative;
-	margin-left: 10px;
-}
-
-.stage {
-	background-image: url(../images/bricks.jpg);
-	background-size: cover;
-	width: 90%;
-	margin: 5%;
-	height: 500px;
-    text-align: center;
-    border-radius: 5px;
-}
-#spotlight{
-    background-image: url(../images/spotlight.png);
-    background-size: cover;
-    // opacity: 0.9;
-    width:100%;
-    height: 500px;
-    z-index: 1;
-    margin: 0;
-}
-#performing{
-    z-index: 0;
-    // display: inline;
-    width: 150px;
-    height: 150px;
-    position: relative;
-    top: 60px;
-    left: 310px;
-}
-#microphone{
-    // z-index: 4;
-	width: 20%;
-	// margin-top: 100px;
-	// margin-right: 270px;
-}
-%comedian_style {
-    width:150px; 
-    height:150px; 
-    margin:10px;
-    border: 10px solid $default-muted-blue;
-    border-radius: 10%;
-	display: inline-block;
-}
-
-.comedians_list {
-
-}
-.on_deck{
-    width:150px;
-    height:150px;
-    border-radius: 10%;
-}
-
-#louis, #amy, #aziz, #hannibal, #george {
-    @extend %comedian_style;
-}
-
-#louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
-	border: 10px solid #CBE86B;
-} 
-
-#drop_location{
-    @extend %comedian_style;
-}
-
-button {
-	padding: 10px 15px;
-	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-	background-color: #CBE86B;
-	color: $default-dark-blue;
-	border-radius: 7px;
-	font-size: 20px;
-}
-
-button:hover {
-	background-color: $default-dark-blue;
-	color: #CBE86B;
-}
-
-.comedian_on_stage {
-	width: 200px;
-	height: 200px;
-	border-radius: 10px;
-}
-
-@media (max-width: 500px) { 
-	
-	#microphone{
-		display: none;
-	}
-
-	#controls {
-		margin-top: 200px;
-	}
-
-}
 
