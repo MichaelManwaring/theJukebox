@@ -1,15 +1,23 @@
 $(document).ready(function(){
-	function Jukebox (load_tracks) {
+	// version 2.0 stuff
+	function Song(name){
+		this.name = name + ".mp3"
+		this.img_src = name + ".jpg"
+		this.location_in_array = 0
+		this.setLocation = function(spot){
+			this.location_in_array=spot
+		}
+	}
+	// function Jukebox (load_tracks) {
+	function Jukebox () {
 		this.current_track = 0
-		this.all_tracks = load_tracks
-		
-		this.playlist = [];
+		this.all_tracks = []	
 		this.new_track = function () {
 			console.log("NEW")
-			$("#mic").html("<audio><source src= " + this.all_tracks[this.current_track] + " type='audio/mpeg'></audio>")
+			$("#mic").html("<audio><source src= " + this.all_tracks[this.current_track].name + " type='audio/mpeg'></audio>")
 		}
 		this.play_current_track = function () {
-			// console.log("play")
+			// console.log("play")a
 			$('audio')[0].play()
 		};
 		this.pause_current_track = function () {
@@ -24,6 +32,11 @@ $(document).ready(function(){
 			this.pause_current_track()
 			this.reset_current_track()
 		}
+		// version 2.0 stuff
+		this.load_track = function (track) {
+			this.all_tracks.push(track)
+			track.setLocation(this.all_tracks.length)
+		}
 	}
 
 	function replace_pic (comedian) {
@@ -32,26 +45,23 @@ $(document).ready(function(){
 		$('#performing').html("<img src='images/" + comedian.substring(1)  +".jpg' class='comedian_on_stage'>")
 	}
 
-// STUFF FOR V2.0
-// var new_song ={
-// 	name: "louis.mp3",
-// 	img:"",
-// 	index:
-// }
+	// the_jokebox = new Jukebox(["louis.mp3","amy.mp3","aziz.mp3","hannibal.mp3","george.mp3"])
+	the_jokebox = new Jukebox()
 
-// function Song(name, src){
-// 	this.name = name
-// 	this.img_src = src
-// 	this.location_in_array = 0
-// 	this.setLocation = function(){
+	the_jokebox.load_track(new Song('louis'))
+	the_jokebox.load_track(new Song('amy'))
+	the_jokebox.load_track(new Song('aziz'))
+	the_jokebox.load_track(new Song('george'))
+	the_jokebox.load_track(new Song('hannibal'))
 
-// 	}
-// }
 
-	the_jokebox = new Jukebox(["louis.mp3","amy.mp3","aziz.mp3","hannibal.mp3","george.mp3"])
+
+	
 	the_jokebox.new_track()
 
-	$('#louis').click(function () {
+
+
+	$('#').click(function () {
 		// $(this)
 		// s.location_in_array
 		console.log("clicked LOUIE")
@@ -119,12 +129,15 @@ $(document).ready(function(){
 	})
 
 
+
+
+
 	function blink(msg){
-	$(msg).fadeOut('slow', function(){
-	$(this).fadeIn('slow', function(){
-	blink(this);
-	});
-	});
+		$(msg).fadeOut('slow', function(){
+			$(this).fadeIn('slow', function(){
+				blink(this);
+			});
+		});
 	}
 
 	blink('#jokebox_header');
