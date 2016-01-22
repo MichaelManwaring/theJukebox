@@ -1,0 +1,66 @@
+#jokebox_header{
+	font-family: 'Pacifico', cursive;
+	font-size: 70px;
+	float: left;
+	z-index: 2;
+	color: $default-orange;
+	transform: rotate(-20deg);
+	margin: 0;
+}
+
+.stage {
+	background-image: url(../images/bricks.jpg);
+	background-size: cover;
+	width: 90%;
+	margin: 5%;
+	height: 500px;
+    text-align: center;
+    border-radius: 5px;
+}
+#spotlight{
+    background-image: url(../images/spotlight.png);
+    background-size: cover;
+    // opacity: 0.9;
+    width:100%;
+    height: 500px;
+    z-index: 1;
+    margin: 0;
+}
+#performing{
+    z-index: 0;
+    // display: inline;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 60px;
+    left: 310px;
+}
+#microphone{
+    // z-index: 4;
+	width: 20%;
+	// margin-top: 100px;
+	// margin-right: 270px;
+}
+
+#drop_location{
+    @extend %comedian_style;
+}
+
+.comedian_on_stage {
+	width: 200px;
+	height: 200px;
+	border-radius: 10px;
+}
+
+
+@media (max-width: 500px) { 
+	
+	#microphone{
+		display: none;
+	}
+
+	#controls {
+		margin-top: 200px;
+	}
+
+}
