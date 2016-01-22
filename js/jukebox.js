@@ -2,18 +2,19 @@ $(document).ready(function(){
 	// version 2.0 stuff
 	function Song(name){
 		this.name = name + ".mp3"
-		this.img_src = name + ".jpg"
-		this.location_in_array = 0
-		this.setLocation = function(spot){
-			this.location_in_array=spot
-		}
+		this.img_src = "images/" + name + ".jpg"
+		// this.location_in_array = 0
+		// this.setLocation = function(spot){
+		// 	this.location_in_array=spot
+		// }
 	}
 	// function Jukebox (load_tracks) {
 	function Jukebox () {
 		this.current_track = 0
-		this.all_tracks = []	
+		this.all_tracks = []
+		this.track_list = {}
 		this.new_track = function () {
-			console.log("NEW")
+			// console.log("NEW")
 			$("#mic").html("<audio><source src= " + this.all_tracks[this.current_track].name + " type='audio/mpeg'></audio>")
 		}
 		this.play_current_track = function () {
@@ -35,68 +36,91 @@ $(document).ready(function(){
 		// version 2.0 stuff
 		this.load_track = function (track) {
 			this.all_tracks.push(track)
-			track.setLocation(this.all_tracks.length)
+			this.track_list[track.name.slice(0, -4)]=(this.all_tracks.length-1)
+			// console.log(track.name)
+			// console.log(this.track_list[track.name.slice(0, -4)])
 		}
 	}
 
 	function replace_pic (comedian) {
 		$('.hider').css( "visibility", "visible");
-		$(comedian).css('visibility', "hidden");
-		$('#performing').html("<img src='images/" + comedian.substring(1)  +".jpg' class='comedian_on_stage'>")
+		$("#"+comedian).css('visibility', "hidden");
+		$('#performing').html("<img src='images/" + comedian  +".jpg' class='comedian_on_stage'>")
 	}
 
 	// the_jokebox = new Jukebox(["louis.mp3","amy.mp3","aziz.mp3","hannibal.mp3","george.mp3"])
+	
+	function build_gallery (participants){
+		gallery_string=""
+		for (var i in participants) {
+			next= ("<div id='" + participants[i].name.slice(0, -4)  + "' class='hider'><img src='" + participants[i].img_src + "' class='on_deck'></div>")
+			console.log(next)
+			gallery_string += next
+		}
+		// console.log(gallery_string)
+		$('.comedians_list').html(gallery_string)
+	}
+
+	// initialize jukebox and move to first track
+
 	the_jokebox = new Jukebox()
 
 	the_jokebox.load_track(new Song('louis'))
 	the_jokebox.load_track(new Song('amy'))
 	the_jokebox.load_track(new Song('aziz'))
-	the_jokebox.load_track(new Song('george'))
 	the_jokebox.load_track(new Song('hannibal'))
+	the_jokebox.load_track(new Song('george'))
 
 
 
+
+	// set up gallery and load first track
+	build_gallery(the_jokebox.all_tracks)
 	
 	the_jokebox.new_track()
 
+	replace_pic(the_jokebox.all_tracks[0].name.slice(0,-4))
 
 
-	$('#').click(function () {
-		// $(this)
-		// s.location_in_array
-		console.log("clicked LOUIE")
-		the_jokebox.current_track = 0
+	
+
+
+
+	$('.hider').click(function (event) {
+		var clicked = this.id	
+		console.log(the_jokebox.track_list[clicked])
+		the_jokebox.current_track = the_jokebox.track_list[clicked]
 		the_jokebox.new_track()
-		replace_pic('#louis')
+		replace_pic(clicked)
 	})
 
-	$('#amy').click(function () {
-		console.log("clicked AMY")
-		the_jokebox.current_track = 1
-		the_jokebox.new_track()
-		replace_pic('#amy')
-	})
+	// $('#amy').click(function () {
+	// 	console.log("clicked AMY")
+	// 	the_jokebox.current_track = 1
+	// 	the_jokebox.new_track()
+	// 	replace_pic('#amy')
+	// })
 
-	$('#aziz').click(function () {
-		console.log("clicked AZIZ")
-		the_jokebox.current_track = 2
-		the_jokebox.new_track()
-		replace_pic('#aziz')
-	})
+	// $('#aziz').click(function () {
+	// 	console.log("clicked AZIZ")
+	// 	the_jokebox.current_track = 2
+	// 	the_jokebox.new_track()
+	// 	replace_pic('#aziz')
+	// })
 
-	$('#hannibal').click(function () {
-		console.log("clicked HANNIBAL")
-		the_jokebox.current_track = 3
-		the_jokebox.new_track()
-		replace_pic('#hannibal')
-	})
+	// $('#hannibal').click(function () {
+	// 	console.log("clicked HANNIBAL")
+	// 	the_jokebox.current_track = 3
+	// 	the_jokebox.new_track()
+	// 	replace_pic('#hannibal')
+	// })
 
-	$('#george').click(function () {
-		console.log("clicked GEORGE")
-		the_jokebox.current_track = 4
-		the_jokebox.new_track()
-		replace_pic('#george')
-	})
+	// $('#george').click(function () {
+	// 	console.log("clicked GEORGE")
+	// 	the_jokebox.current_track = 4
+	// 	the_jokebox.new_track()
+	// 	replace_pic('#george')
+	// })
 
 	$('#play_button').click(function () {
 		// console.log("click play")
@@ -136,6 +160,7 @@ $(document).ready(function(){
 		$(msg).fadeOut('slow', function(){
 			$(this).fadeIn('slow', function(){
 				blink(this);
+				console.log('blink')
 			});
 		});
 	}
