@@ -10,13 +10,20 @@
 </head>
 <body>
 	<header>
+		<!-- header will be rotated and blinking to mimic a flashing neon sign -->
 		<h1 id="jokebox_header">The Jokebox</h1>
 	</header>
+	<!-- stage contains all elements on the 'brick wall' -->
 	<div class="stage">
+		<!-- used to create a blackened spotlight effect -->
 		<div id="spotlight">
+			<!-- div for the current comedian's photo to move to -->
 			<div id="performing"></div>
+			<!-- div for where the audio file is moved to -->
 			<div id='mic'></div>
+			<!-- image for microphone on the stage -->
 			<img src="images/microphone.png" id="microphone">
+			<!-- buttons for the controls, js will add functionality -->
 			<div id='controls'>
 				<button id="play_button" type="button">Tell Joke</button>
 				<button id="pause_button" type="button">Heckle</button>
@@ -27,6 +34,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- div for photos of comedians 'on deck' -->
 	<div class="comedians_list"></div>
 </body>
 </html>

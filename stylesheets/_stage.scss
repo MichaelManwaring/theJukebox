@@ -1,5 +1,9 @@
 
-
+// this is for the flashing header of the website
+// imported font
+// flashing happens in js file
+// on a z index to make sure it's above the 'spotlight'
+// rotated to look more like a comedy club sign
 #jokebox_header{
 	font-family: 'Pacifico', cursive;
 	font-size: 70px;
@@ -10,6 +14,9 @@
 	margin: 0;
 }
 
+// background image is bricks
+// covers the div
+// everything within 'stage' is centered
 .stage {
 	background-image: url(../images/bricks.jpg);
 	background-size: cover;
@@ -19,6 +26,8 @@
     text-align: center;
     border-radius: 5px;
 }
+
+// used to create spotlight effect on stage
 #spotlight{
     background-image: url(../images/spotlight.png);
     background-size: cover;
@@ -28,6 +37,10 @@
     z-index: 1;
     margin: 0;
 }
+
+// applies to div of the current comedian playing
+// this is where their photo moves to on the stage
+// set to be just left of the microphone
 #performing{
     z-index: 0;
     // display: inline;
@@ -37,23 +50,21 @@
     top: 60px;
     left: 310px;
 }
+
 #microphone{
-    // z-index: 4;
 	width: 20%;
-	// margin-top: 100px;
-	// margin-right: 270px;
 }
 
-#drop_location{
-    @extend %comedian_style;
-}
-
+// styles for the photo of the current comedian when photo is placed on the stage
 .comedian_on_stage {
 	width: 200px;
 	height: 200px;
 	border-radius: 10px;
 }
 
+// media query for smaller display
+// microphone and photo of current comedian disappear
+// controls (buttons) move up 
 @media (max-width: 500px) { 
 
 	#microphone{
