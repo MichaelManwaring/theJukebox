@@ -117,7 +117,7 @@ $(document).ready(function(){
 		// calling a random track		
 		the_jokebox.current_track = Math.floor(Math.random()*the_jokebox.all_tracks.length);
 		the_jokebox.new_track()
-
+		replace_pic(the_jokebox.all_tracks[(the_jokebox.current_track)].name)
 	})
 	// blink function for sign
 	function blink(msg){
