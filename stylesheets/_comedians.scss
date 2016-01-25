@@ -1,4 +1,5 @@
 
+// created one set of styles for all the comedians photos
 %comedian_style {
     width:150px; 
     height:150px; 
@@ -11,16 +12,19 @@
 .comedians_list {
 
 }
+// applies to comedians under the stage
 .on_deck{
     width:150px;
     height:150px;
     border-radius: 10%;
 }
 
+// each comedian photo extending from comedian_style
 #louis, #amy, #aziz, #hannibal, #george {
     @extend %comedian_style;
 }
 
+// each comedian photo's border changes upon hover
 #louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
 	border: 10px solid $default-neon-yellow;
 } 

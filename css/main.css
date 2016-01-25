@@ -15,21 +15,22 @@ button:hover {
   background-color: #1E2345;
   color: #CBE86B; }
 
-#louis, #amy, #aziz, #hannibal, #george, #drop_location {
-  width: 150px;
-  height: 150px;
-  margin: 10px;
-  border: 10px solid #35314C;
-  border-radius: 10%;
-  display: inline-block; }
+@media (min-width: 768px) {
+  #louis, #amy, #aziz, #hannibal, #george, #drop_location {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 10px solid #35314C;
+    border-radius: 10%;
+    display: inline-block; }
 
-.on_deck {
-  width: 150px;
-  height: 150px;
-  border-radius: 10%; }
+  .on_deck {
+    width: 150px;
+    height: 150px;
+    border-radius: 10%; }
 
-#louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
-  border: 10px solid #CBE86B; }
+  #louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
+    border: 10px solid #CBE86B; } }
 
 #jokebox_header {
   font-family: 'Pacifico', cursive;
@@ -38,7 +39,8 @@ button:hover {
   z-index: 2;
   color: #E15E32;
   transform: rotate(-20deg);
-  margin: 0; }
+  margin: 0; 
+}
 
 .stage {
   background-image: url(../images/bricks.jpg);
@@ -78,7 +80,7 @@ button:hover {
     display: none; }
 
   #controls {
-    margin-top: 100px; }
+    margin-top: 200px; }
 
   #performing .comedian_on_stage {
     display: none; } }

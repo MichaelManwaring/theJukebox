@@ -1,15 +1,19 @@
 
-// main.scss
+// default colors
 $default-orange: #E15E32;
 $default-dark-blue: #1E2345 ;
 $default-muted-blue: #35314C ;
 $default-neon-yellow: #CBE86B ;
 
+// imports 
 @import 'bourbon/bourbon';
 @import '_buttons';
 @import '_comedians';
 @import '_stage';
 
+// set body background to black
+// font color to white
+// center align the whole page
 body{
 	background-color: black;
 	color: white;
