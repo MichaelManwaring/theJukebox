@@ -1,3 +1,5 @@
+
+
 #jokebox_header{
 	font-family: 'Pacifico', cursive;
 	font-size: 70px;
@@ -52,15 +54,22 @@
 	border-radius: 10px;
 }
 
-
 @media (max-width: 500px) { 
-	
+
 	#microphone{
 		display: none;
 	}
 
 	#controls {
-		margin-top: 200px;
+		margin-top: 100px;
+	}
+
+	#performing .comedian_on_stage {
+		display: none;
 	}
 
 }
+
+
+
+
