@@ -3,7 +3,7 @@ $(document).ready(function(){
 	function Track(name){
 		this.name = name
 		// audio files have names corresponding to their artists
-		this.file_name = name + ".mp3"
+		this.file_name = "audio/" + name + ".mp3"
 		// image files have names corresponding to their artists
 		this.img_src = "images/" + name + ".jpg"
 	}
@@ -44,14 +44,14 @@ $(document).ready(function(){
 		// switches out the current on stage picture with the one clicked on by hiding the 'on deck' image and changing the one onstage
 		$('.hider').css( "visibility", "visible");
 		$("#"+comedian).css('visibility', "hidden");
-		$('#performing').html("<img src='images/" + comedian  +".jpg' class='comedian_on_stage'>")
+		$('#performing').html("<img src='images/" + comedian  +".jpg' class='comedian_on_stage comedian'>")
 	}
 
 	function build_gallery (participants){
 		// Populates a gallery with comedians images that are clickable to allow track changes
 		gallery_string=""
 		for (var i in participants) {
-			next= ("<div id='" + participants[i].name  + "' class='hider'><img src='" + participants[i].img_src + "' class='on_deck'></div>")
+			next= ("<div id='" + participants[i].name  + "' class='hider'><img src='" + participants[i].img_src + "' class='on_deck comedian'></div>")
 			console.log(next)
 			gallery_string += next
 		}
@@ -63,9 +63,9 @@ $(document).ready(function(){
 
 	the_jokebox = new Jukebox()
 	// load the tracks
-	the_jokebox.load_track(new Track('louis'))
+	// the_jokebox.load_track(new Track('louis'))
 	the_jokebox.load_track(new Track('amy'))
-	the_jokebox.load_track(new Track('aziz'))
+	// the_jokebox.load_track(new Track('aziz'))
 	the_jokebox.load_track(new Track('hannibal'))
 	the_jokebox.load_track(new Track('george'))
 
@@ -128,5 +128,5 @@ $(document).ready(function(){
 			});
 		});
 	}
-	blink('#jokebox_header');
+	// blink('#jokebox_header');
 })
