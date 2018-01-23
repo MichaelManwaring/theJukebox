@@ -128,5 +128,5 @@ $(document).ready(function(){
 			});
 		});
 	}
-	// blink('#jokebox_header');
+	blink('#jokebox_header');
 })
