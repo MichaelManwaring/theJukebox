@@ -1,12 +1,17 @@
 #controls {
+  background-image: url("../images/audience.jpg");
+  background-size: cover;
   position: relative;
-  margin-left: 10px; }
+  padding: 5%;
+  height: 500px;
+}
 
 button {
   padding: 10px 15px;
+  margin: 1%;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
-  background-color: #CBE86B;
+  background-color: #E15E32;
   color: #1E2345;
   border-radius: 7px;
   font-size: 20px; }
@@ -27,10 +32,13 @@ button:hover {
   .on_deck {
     width: 150px;
     height: 150px;
-    border-radius: 10%; }
+    border-radius: 10%; 
+  }
 
   #louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
-    border: 10px solid #CBE86B; } }
+    border: 10px solid #CBE86B; 
+  } 
+}
 
 #jokebox_header {
   font-family: 'Pacifico', cursive;
@@ -39,54 +47,65 @@ button:hover {
   z-index: 2;
   color: #E15E32;
   transform: rotate(-20deg);
-  margin: 0; 
+  margin: 50px; 
 }
 
 .stage {
   background-image: url(../images/bricks.jpg);
-  background-size: cover;
-  width: 90%;
-  margin: 5%;
-  height: 500px;
+  background-size: 100%;
+  /*width: 100%;*/
+  /*margin: 5%;*/
+  /*height: 500px;*/
   text-align: center;
-  border-radius: 5px; }
+  /*border-radius: 5px; */
+}
 
 #spotlight {
   background-image: url(../images/spotlight.png);
-  background-size: cover;
-  width: 100%;
-  height: 500px;
+  background-size: 100%;
+  /*width: 100%;*/
+  height: 100%;
   z-index: 1;
-  margin: 0; }
+  margin: 0; 
+}
 
 #performing {
   z-index: 0;
   width: 150px;
-  height: 150px;
+  /*height: 300px;*/
   position: relative;
-  top: 60px;
-  left: 310px; }
+  top: -60px;
+  left: 40%; 
+}
 
 #microphone {
-  width: 20%; }
+  width: 20%;
+  z-index: 10;
+  position: relative;
+
+}
 
 .comedian_on_stage {
   width: 200px;
   height: 200px;
-  border-radius: 10px; }
+  border-radius: 10px; 
+  box-shadow: 10px 10px 10px 1px black;
+}
 
-@media (max-width: 500px) {
-  #microphone {
-    display: none; }
 
-  #controls {
-    margin-top: 200px; }
 
-  #performing .comedian_on_stage {
-    display: none; } }
 body {
-  background-color: black;
+  /*background-color: black;*/
   color: white;
-  text-align: center; }
+  text-align: center; 
+  margin: 0;
+}
+.comedians_list{
+  float: right;
+  margin: 5% 0;
+}
+.comedian{
+  /*width: 10em;*/
+}
 
 /*# sourceMappingURL=main.css.map */
