@@ -1,3 +1,8 @@
+#octocat{
+  width: 15%;
+  margin-top: 5%;
+}
+
 #controls {
   background-image: url("../images/audience.jpg");
   background-size: cover;
@@ -12,7 +17,7 @@ button {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
   background-color: #E15E32;
-  color: #1E2345;
+  /*color: white;*/
   border-radius: 7px;
   font-size: 20px; }
 
@@ -20,26 +25,39 @@ button:hover {
   background-color: #1E2345;
   color: #CBE86B; }
 
-@media (min-width: 768px) {
-  #louis, #amy, #aziz, #hannibal, #george, #drop_location {
-    width: 150px;
-    height: 150px;
-    margin: 10px;
-    border: 10px solid #35314C;
-    border-radius: 10%;
-    display: inline-block; }
+#louis, #amy, #aziz, #hannibal, #george, #drop_location {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  border: 10px solid #35314C;
+  border-radius: 10%;
+  display: inline-block; }
 
-  .on_deck {
-    width: 150px;
-    height: 150px;
-    border-radius: 10%; 
-  }
-
-  #louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
-    border: 10px solid #CBE86B; 
-  } 
+.comedians_list{
+  float: right;
+  margin: 5% 0;
+}
+.on_deck {
+  width: 150px;
+  height: 150px;
+  border-radius: 10%; 
 }
 
+#louis:hover, #amy:hover, #aziz:hover, #hannibal:hover, #george:hover {
+  border: 10px solid #CBE86B; 
+} 
+@media (max-width: 1100px) {
+  #jokebox_header{
+    width:10%;
+    height: 5%;
+  }
+  
+}
+@media (max-width: 746px) {
+  .comedians_list{
+    display: none;
+  }
+}
 #jokebox_header {
   font-family: 'Pacifico', cursive;
   font-size: 70px;
@@ -95,14 +113,10 @@ button:hover {
 
 
 body {
-  /*background-color: black;*/
+  background-color: black;
   color: white;
   text-align: center; 
   margin: 0;
-}
-.comedians_list{
-  float: right;
-  margin: 5% 0;
 }
 .comedian{
   /*width: 10em;*/
