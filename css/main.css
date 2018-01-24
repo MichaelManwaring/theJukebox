@@ -70,7 +70,7 @@ button:hover {
 
 .stage {
   background-image: url(../images/bricks.jpg);
-  background-size: 100%;
+  background-size: 100% no-repeat;
   /*width: 100%;*/
   /*margin: 5%;*/
   /*height: 500px;*/
